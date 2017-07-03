@@ -1,5 +1,6 @@
 // form.js
 //获取不同颜色的函数
+//更改的内容
 function getRandomColor() {
   let rgb = []
   for (let i = 0; i < 3; ++i) {
