@@ -1,0 +1,163 @@
+<!--form.wxml-->
+<view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>
+<block wx:for="{{pageData}}">
+  <view wx:if="{{(item.type=='text')}}">
+    <template is="text"></template>
+  </view>
+  <view wx:if="{{(item.type=='radio')}}">
+    <template is="radio" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='checkbox')}}">
+    <template is="checkbox" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='multiline')}}">
+    <template is="multiline"></template>
+  </view>
+  <view wx:if="{{(item.type=='mulfillblank')}}">
+    <template is="mulfillblank"></template>
+  </view>
+  <view wx:if="{{(item.type=='textfield')}}">
+    <template is="textfield"></template>
+  </view>
+  <view wx:if="{{(item.type=='branch')}}">
+    <template is="branch"></template>
+  </view>
+  <view wx:if="{{(item.type=='assbutton')}}">
+    <template is="assbutton"></template>
+  </view>
+  <view wx:if="{{(item.type=='hyperlink')}}">
+    <template is="hyperlink"></template>
+  </view>
+  <view wx:if="{{(item.type=='page')}}">
+    <template is="page"></template>
+  </view>
+  <view wx:if="{{(item.type=='upload')}}">
+    <template is="upload"></template>
+  </view>
+  <view wx:if="{{(item.type=='video')}}">
+    <template is="video" data="{{src}}"></template>
+  </view>
+</block>
+<!--单行填空模板-->
+<template name="text">
+  <view class="textTtile">单行填空题</view>
+  <input type="text" name="text"/>
+</template>
+<!--多行填空模板-->
+<template name="multiline">
+  <view class="multilineTtile">多行填空题</view>
+  <input type="text" />
+</template>
+<!--单选模板-->
+<template name="radio">
+  <view class="radioTtile">单选题</view>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{item.radio}}">
+      <radio />{{item.option_name}}
+    </label>
+    <!--<label class="radio">
+      <radio />选项1
+    </label>
+    <label class="radio">
+      <radio />选项2
+    </label>-->
+  </radio-group>
+</template>
+<template name="checkbox">
+  <view class="radioTtile">多选题</view>
+  <checkbox-group class="radio-group" bindchange="radioChange">
+    <label class="checkbox" wx:for="{{item.checkbox}}" bindtap="showToast">
+      <checkbox />{{item.option_name}}
+    </label>
+  </checkbox-group>
+</template>
+<!--多项填空题模板-->
+<template name="mulfillblank">
+  多项填空题
+</template>
+<!--文本行组件模板-->
+<template name="textfield">
+  文本行
+</template>
+<!--分行组件模板-->
+<template name="branch">
+  分行
+</template>
+<!--按钮组件模板-->
+<template name="assbutton">
+  按钮
+</template>
+<!--分页组件模板-->
+<template name="page">
+  分页
+</template>
+<!--上传组件模板-->
+<template name="upload">
+  上传组件
+</template>
+<!--超链接组件模板-->
+<template name="hyperlink">
+  超链接组件
+</template>
+<!--视频组件模板-->
+<template name="video" data="{{src}}">
+  <text>视频组件</text>
+  <view class="section tc">
+    <video src="{{src}}" controls></video>
+    <view class="btn-area">
+      <button bindtap="bindButtonTap">获取视频</button>
+    </view>
+  </view>
+
+  <view class="section tc">
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+      danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+    <view class="btn-area">
+      <button bindtap="bindButtonTap">获取视频</button>
+      <input bindblur="bindInputBlur" />
+      <button bindtap="bindSendDanmu">发送弹幕</button>
+    </view>
+  </view>
+</template>
+<template is="video" data="{{src}}"></template>
+
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch" />
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">slider</view>
+    <slider name="slider" show-value></slider>
+  </view>
+
+  <view class="section">
+    <view class="section__title">input</view>
+    <input name="password" placeholder="please input here" type="idcard" bindinput="terryfry"/>
+    <text>{{tip}}</text>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">radio</view>
+    <radio-group name="radio-group">
+      <label>
+        <radio value="radio1" />radio1</label>
+      <label>
+        <radio value="radio2" />radio2</label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">checkbox</view>
+    <checkbox-group name="checkbox">
+      <label>
+        <checkbox value="checkbox1" />checkbox1</label>
+      <label>
+        <checkbox value="checkbox2" />checkbox2</label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+  <template is="text"></template>
+</form>
