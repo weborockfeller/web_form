@@ -8,6 +8,8 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <view class="fucList">
-     <navigator url="../form/form">一般表单</navigator>
+     <navigator url="../form/form" class="navigator">1、一般表单demo</navigator>
+     <navigator url="../upload/upload" class="navigator">2、上传demo</navigator>
+     <navigator url="../formalForm/index" class="navigator">3、一般表单</navigator>
   </view>
 </view>

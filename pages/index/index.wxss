@@ -19,3 +19,8 @@
 .usermotto {
   margin-top: 200px;
 }
+.navigator{
+  color: #81d8d0;
+  font-style: italic;
+  margin-top: 10px;
+}

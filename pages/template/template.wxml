@@ -1,0 +1,104 @@
+<!--template.wxml-->
+<!--单行填空模板-->
+<template name="text">
+  <view id="view_single" class="page page{{item.page_i}}">
+    <view id="view_add_4" class="interval dragrank different" releid="new_name">
+      <view class="intervalall">
+        <view class="title-rules" hidden=""></view>
+        <view class="single-title " relename="0">单行填空题</view>
+        <view class="single-describe describe" relename="0"></view>
+        <view class="single-inputtext">
+          <input relename="0" type="text" name="view_add_4" placeholder="" class="from_verify" mess="单行填空题" valtype="" />
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<!--多行填空模板-->
+<template name="multiline">
+  <view id="view_multiple" class="page page{{item.page_i}}" style="display: block;">
+    <view id="view_add_5" class="interval dragrank different" releid="new_name">
+      <view class="intervalall">
+        <view class="title-rules" hidden=""></view>
+        <view class="multiple-title " relename="0">多行填空题</view>
+        <view class="multiple-describe describe" relename="0"></view>
+        <view class="multiple-inputtextarea">
+          <textarea name="view_add_5" relename="0" placeholder="" type="textarea" class="from_verify" mess="多行填空题" valtype="" style="height:4.8em"></textarea>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<!--单选模板-->
+<template name="radio">
+  <view class="radioTitle">单选题</view>
+  <radio-group class="radio-group">
+    <label class="radio" wx:for="{{item.radio}}" class="radioLabel">
+      <radio />{{item.option_name}}
+    </label>
+  </radio-group>
+</template>
+<template name="checkbox">
+  <view class="checkboxTitle">多选题</view>
+  <checkbox-group class="radio-group">
+    <label wx:for="{{item.checkbox}}" class="checkboxLabel">
+      <checkbox />{{item.option_name}}
+    </label>
+  </checkbox-group>
+</template>
+<!--多项填空题模板-->
+<template name="mulfillblank">
+  <view class="mulfillblankTitle">多项填空题</view>
+  <label wx:for="{{item.mulfillblank}}" class="mulfillblankLabel">
+    <text>{{item.title}}</text>
+    <input placeholder="请输入" />
+  </label>
+</template>
+<!--文本行组件模板-->
+<template name="textfield">
+  <text>{{item.holdplace}}</text>
+</template>
+<!--分行组件模板-->
+<template name="branch">
+  <view class="divided"></view>
+</template>
+<!--按钮组件模板-->
+<template name="assbutton">
+  <navigator url="" class="assbutton">{{item.title}}</navigator>
+</template>
+<!--分页组件模板-->
+<template name="page">
+  <button bindtap="pageChange">{{item.subtitle}}</button>
+</template>
+<!--上传组件模板-->
+<template name="upload">
+  <view class="title">上传组件</view>
+  <view class="xd-container">
+    <form bindsubmit="bindSaveTap">
+      <image class="xd-img-user1" catchtap="chooseImageTap" src="{{logo}}" mode="aspectFit"></image>
+    </form>
+  </view>
+</template>
+<!--超链接组件模板-->
+<template name="hyperlink">
+  <navigator url="" class="hyperlink">{{item.title}}</navigator>
+</template>
+<!--视频组件模板-->
+<template name="video">
+  <text>视频组件</text>
+  <view class="section tc">
+    <video src="{{src}}" controls></video>
+    <view class="btn-area">
+      <button bindtap="bindButtonTap">获取视频</button>
+    </view>
+  </view>
+
+  <view class="section tc">
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+      danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+    <view class="btn-area">
+      <input bindblur="bindInputBlur" />
+      <button bindtap="bindSendDanmu">发送弹幕</button>
+    </view>
+  </view>
+</template>

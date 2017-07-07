@@ -1,0 +1,36 @@
+/* index.wxss */
+.title{
+  font-size: 20px;
+  text-align: center;
+}
+.radioLabel,.checkboxLabel,.mulfillblankLabel{
+  display: block;
+  margin-top: 10px;
+}
+.divided{
+    width: auto;
+    height: 2px;
+    border-bottom: #666 solid 2px;
+}
+.assbutton{
+    display: block;
+    color: white;
+    padding: 0px 1.32em;
+    background: #81d8d0;
+    text-align: center;
+    line-height: 2.55555556
+}
+.hyperlink{
+  color: #398e84;
+  text-decoration: underline;
+}
+.xd-container{
+  background: #f33;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+}
+image{
+  width: 100%;
+  height: 100%;
+}

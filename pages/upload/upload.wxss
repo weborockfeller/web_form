@@ -1,0 +1,9 @@
+/* upload.wxss */
+.title{
+  font-size: 20px;
+  text-align: center;
+}
+.xd-img-user1{
+  border-top: 1px solid black;
+  border-bottom:1px solid black;
+}

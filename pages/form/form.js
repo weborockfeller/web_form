@@ -97,8 +97,21 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/page/user?id=123',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   },
   bindInputBlur: function (e) {
     this.inputValue = e.detail.value
@@ -118,6 +131,7 @@ Page({
     })
   },
   bindSendDanmu: function () {
+    console.log(this);
     this.videoContext.sendDanmu({
       text: this.inputValue,
       color: getRandomColor()

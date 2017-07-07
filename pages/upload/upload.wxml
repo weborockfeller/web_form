@@ -1,0 +1,8 @@
+<!--upload.wxml-->
+<view class="title">上传组件</view>
+<view class="xd-container">
+  <form bindsubmit="bindSaveTap">
+    <image class="xd-img-user1" catchtap="chooseImageTap" src="{{logo}}" mode="aspectFit"></image>
+  </form>
+</view>
+<text>请点击黑框区域选择您想上传的图片</text>

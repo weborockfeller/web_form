@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="title">一般表单答题页</view>
+<import src="../template/template.wxml"/>
+<block wx:for="{{pageData}}">
+  <view wx:if="{{(item.type=='text')}}">
+    <template is="text" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='radio')}}">
+    <template is="radio" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='checkbox')}}">
+    <template is="checkbox" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='multiline')}}">
+    <template is="multiline" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='mulfillblank')}}">
+    <template is="mulfillblank" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='textfield')}}">
+    <template is="textfield" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='branch')}}">
+    <template is="branch" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='assbutton')}}">
+    <template is="assbutton" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='hyperlink')}}">
+    <template is="hyperlink" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='page')}}">
+    <template is="page" data="{{item}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='upload')}}">
+    <template is="upload" data="{{logo}}"></template>
+  </view>
+  <view wx:if="{{(item.type=='video')}}">
+    <template is="video" data="{{src}}"></template>
+  </view>
+</block>
