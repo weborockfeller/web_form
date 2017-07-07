@@ -1,4 +1,5 @@
 //app.js
+//在新分支中改动的东西
 App({
   onLaunch: function() {
     //调用API从本地缓存中获取数据
