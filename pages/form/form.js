@@ -103,7 +103,7 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '自定义转发标题',
+      title: '一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五一二三四五',
       path: '/page/user?id=123',
       success: function (res) {
         // 转发成功

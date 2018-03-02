@@ -1,0 +1,37 @@
+<view class="section">
+  <view class="section__title">movable-view区域小于movable-area</view>
+  <movable-area style="height: 500px;width: 200px;background: red;">
+    <movable-view style="height: 50px; width: 50px; background: blue;" x="{{x}}" y="{{y}}" inertia="true" direction="all" damping="30" out-of-bounds="true" friction="3">
+    </movable-view>
+    <movable-view style="height: 50px; width: 50px; background: yellow;" x="{{x}}" y="{{y}}" inertia="true" direction="all" damping="10" out-of-bounds="true">
+    </movable-view>
+  </movable-area>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to move to (30px, 30px)</button>
+  </view>
+  <view class="section__title">movable-view区域大于movable-area</view>
+  <movable-area style="height: 100px;width: 100px;background: red;">
+    <movable-view style="height: 200px; width: 200px; background: blue;" direction="all">
+    </movable-view>
+  </movable-area>
+</view>
+<view style="margin-top:200px;">ICON图标</view>
+<icon type="success" />
+<icon type="success_no_circle" />
+<icon type="info" />
+<icon type="warn" />
+<icon type="waiting" />
+<icon type="cancel" />
+<icon type="download" />
+<icon type="search" />
+<icon type="clear" />
+<button type="default">default</button>
+<button type="primary">primary</button>
+<button type="warn">warn</button>
+
+<contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>
+</contact-button>

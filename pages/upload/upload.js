@@ -105,13 +105,13 @@ Page({
     console.log(res);
     if (res.from === 'button') {
       // 来自页面内转发按钮
-      console.log(res.target)
+      console.log(res)
     }
     return {
       title: '自定义转发标题',
-      path: '/page/user?id=123',
+      path: '/pages/form/form',
       success: function (res) {
-        console.log("成功："+res);
+        console.log(res);
         // 转发成功
       },
       fail: function (res) {
@@ -119,6 +119,9 @@ Page({
         // 转发失败
       }
     }
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   }
 })
 

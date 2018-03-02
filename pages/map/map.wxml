@@ -1,0 +1,23 @@
+<!--map.wxml-->
+<text>map.wxml</text>
+<map id="map" longitude="116.4292" latitude="39.94046" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+<view bindtap="getLocation">点我获取位置</view>
+<text>您的经度是：</text>
+{{latitude}}
+<text>您的纬度是：</text>
+{{longitude}}
+<view class="classname"></view>
+<text>speed:</text>
+{{speed}}
+<text>accuracy:</text>
+{{accuracy}}
+<view bindtap="openLocation">打开位置</view>
+<view bindtap="chooseLocation">打开地图选择位置</view>
+
+<!-- map.wxml -->
+<map id="myMap" show-location />
+
+<button type="primary" bindtap="getCenterLocation">获取位置</button>
+<button type="primary" bindtap="moveToLocation">移动位置</button>
+<button type="primary" bindtap="translateMarker">移动标注</button>
+<button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>

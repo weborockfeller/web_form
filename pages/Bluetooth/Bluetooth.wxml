@@ -1,0 +1,4 @@
+<!--Bluetooth.wxml-->
+<!--目前仅在 mac 版的开发工具上支持蓝牙调试-->
+<text>Bluetooth.wxml</text>
+<button>初始化蓝牙适配器</button>

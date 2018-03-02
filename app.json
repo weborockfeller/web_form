@@ -5,7 +5,11 @@
     "pages/form/form",
     "pages/upload/upload",
     "pages/formalForm/index",
-    "pages/template/template"
+    "pages/template/template",
+    "pages/map/map",
+    "pages/Bluetooth/Bluetooth",
+    "pages/SystemInfo/SystemInfo",
+    "pages/slide/slide"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,8 @@
+<!--SystemInfo.wxml-->
+<text>SystemInfo.wxml</text>
+<button bindtap="getSystemInfo">获取设备信息</button>
+<button bindtap='begin'>监听罗盘数据</button>
+<button bindtap='stop'>停止罗盘数据</button>
+<button bindtap='speed'>监听速度</button>
+<image src='../image/1.jpg' bindtap='preview'></image>
+<image src='../image/2.png'></image>
